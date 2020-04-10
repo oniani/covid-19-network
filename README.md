@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Quickstart](#quickstart)
+- [Visualization](#visualization)
 - [Developers](#developers)
 
 ## Quickstart
@@ -21,6 +22,11 @@ python3 generate_graph.py
 # Link prediction
 python3 predict_links.py
 ```
+
+## Visualization
+
+The network is visualized using [Bokeh](https://bokeh.org/) and is available
+[here: https://www.davidoniani.com/covid-19-network/](https://www.davidoniani.com/covid-19-network/).
 
 ## Developers
 
