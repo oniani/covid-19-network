@@ -1,4 +1,4 @@
-# covid-19-knowledge-graph
+# covid-19-network
 
 ## Table of Contents
 
