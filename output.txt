@@ -1,0 +1,23 @@
+WARNING: not enough removable edges to perform full train-test split!
+Num. (test, val) edges requested: ( 871 ,  290 )
+Num. (test, val) edges returned: ( 0 ,  0 )
+Total nodes: 2907
+Total edges: 2906
+Training edges (positive): 2906
+Training edges (negative): 2906
+Validation edges (positive): 0
+Validation edges (negative): 290
+Test edges (positive): 0
+Test edges (negative): 871
+Walk iteration:
+1 / 10
+2 / 10
+3 / 10
+4 / 10
+5 / 10
+6 / 10
+7 / 10
+8 / 10
+9 / 10
+10 / 10
+<gensim.models.keyedvectors.Word2VecKeyedVectors object at 0x123271590>

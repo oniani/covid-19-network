@@ -1,0 +1,106 @@
+DT Test results:
+Test ROC score DT:  0.8014916064653603
+Test AP score DT:  0.7489905402906263
+
+              precision    recall  f1-score   support
+
+         0.0       0.78      0.84      0.81     19241
+         1.0       0.83      0.76      0.79     19241
+
+    accuracy                           0.80     38482
+   macro avg       0.80      0.80      0.80     38482
+weighted avg       0.80      0.80      0.80     38482
+
+[[16141  3100]
+ [ 4539 14702]]
+acc: 0.8015
+
+LR Test results:
+Test ROC score LR:  0.9353183985543837
+Test AP score LR:  0.949720391049582
+
+
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.95      0.90     19241
+         1.0       0.94      0.83      0.88     19241
+
+    accuracy                           0.89     38482
+   macro avg       0.89      0.89      0.89     38482
+weighted avg       0.89      0.89      0.89     38482
+
+[[18269   972]
+ [ 3294 15947]]
+acc: 0.8891
+
+SVM Test results:
+Test ROC score SVM:  0.8902863676524089
+Test AP score SVM:  0.8730187362863466
+
+
+              precision    recall  f1-score   support
+
+         0.0       0.84      0.96      0.90     19241
+         1.0       0.96      0.82      0.88     19241
+
+    accuracy                           0.89     38482
+   macro avg       0.90      0.89      0.89     38482
+weighted avg       0.90      0.89      0.89     38482
+
+[[18512   729]
+ [ 3493 15748]]
+acc: 0.8903
+
+RF Test results:
+Test ROC score RF:  0.947797521523653
+Test AP score RF:  0.957471438246055
+
+
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.95      0.89     19241
+         1.0       0.95      0.81      0.87     19241
+
+    accuracy                           0.88     38482
+   macro avg       0.89      0.88      0.88     38482
+weighted avg       0.89      0.88      0.88     38482
+
+[[18363   878]
+ [ 3647 15594]]
+acc: 0.8824
+
+NB Test results:
+Test ROC score NB:  0.8809833168754222
+Test AP score NB:  0.8528353313061227
+
+
+              precision    recall  f1-score   support
+
+         0.0       0.84      0.93      0.89     19241
+         1.0       0.93      0.83      0.87     19241
+
+    accuracy                           0.88     38482
+   macro avg       0.89      0.88      0.88     38482
+weighted avg       0.89      0.88      0.88     38482
+
+[[17970  1271]
+ [ 3309 15932]]
+acc: 0.8810
+
+MLP Test results:
+Test ROC score MLP:  0.8891169897614469
+Test AP score MLP:  0.866192694382547
+
+
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.95      0.90     19241
+         1.0       0.94      0.83      0.88     19241
+
+    accuracy                           0.89     38482
+   macro avg       0.89      0.89      0.89     38482
+weighted avg       0.89      0.89      0.89     38482
+
+[[18241  1000]
+ [ 3267 15974]]
+acc: 0.8891
