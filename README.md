@@ -26,7 +26,7 @@ python3 predict_links.py
 ## Visualization
 
 The network is visualized using [Bokeh](https://bokeh.org/) and is available
-[here: https://www.davidoniani.com/covid-19-network/](https://www.davidoniani.com/covid-19-network/).
+[here: https://www.davidoniani.com/covid-19-network/](https://www.davidoniani.com/covid-19-network).
 
 ## Developers
 
