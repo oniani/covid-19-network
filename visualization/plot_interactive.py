@@ -110,7 +110,7 @@ def main() -> None:
     # Define the plot and add the attributes
     plot = figure(
         tools=interactive_tools,
-        title="COVID-19 Co-occurence Network Visualization "
+        title="COVID-19 Co-occurence Network Embeddings Visualization "
         "(by David Oniani and Dr. Feichen Shen)",
         background_fill_color="#fafafa",
         plot_height=300,
@@ -136,7 +136,8 @@ def main() -> None:
     )
 
     output_file(
-        "graph.html", title="COVID-19 Co-occurence Network Visualization"
+        "graph.html",
+        title="COVID-19 Co-occurence Network Embeddings Visualization",
     )
     show(plot)
 
