@@ -1,1 +1,20 @@
 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fhir: <http://hl7.org/fhir/>
+PREFIX pmc: <https://www.ncbi.nlm.nih.gov/pmc/articles#>
+SELECT distinct ?pmc_id0 ?text0 ?pmc_id1 ?text1 (count(?text1) as ?count) WHERE {
+?pmc pmc:annotations
+[ pmc:id ?id0 ; pmc:text ?text0 ; pmc:infons
+[ pmc:type ?type0 ; pmc:identifier ?pmc_id0 ] ] .
+    FILTER ((?type0 = 'Disease') ) .
+    {select * where{
+ 		?pmc pmc:annotations           
+		[ pmc:id ?id1 ; pmc:text ?text1 ; pmc:infons
+		[ pmc:type ?type1 ; pmc:identifier ?pmc_id1 ] ] . 
+            FILTER ((?type1="Mutation") && (contains (lcase(str(?text1)), "coronavirus") || contains (lcase(str(?text1)), "sars"))).
+            
+        }
+        
+    } 
+    
+}Group by ?pmc_id0 ?text0 ?pmc_id1 ?text1 Order by DESC(?count)
