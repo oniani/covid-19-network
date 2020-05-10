@@ -69,6 +69,9 @@ def main() -> None:
         y_cors.append(float(row_cors[2]))
         top_10s.append(", ".join(top_10(row_cors[0], node_data)))
 
+    # Cleanup
+    names = [name.replace("  ", " ").replace("\t", " ") for name in names]
+
     # Create a dataframe
     df = pd.DataFrame(
         {
@@ -140,6 +143,64 @@ def main() -> None:
         title="COVID-19 Co-occurence Network Embeddings Visualization",
     )
     show(plot)
+
+    # CODE GENERATION -- MIGHT LOOK UGLY
+    with open("search.html", "w") as file:
+
+        file.write("<!DOCTYPE html>\n")
+        file.write('<html lang="en">\n')
+        file.write("  <head>\n")
+        file.write('    <meta charset="utf-8">\n')
+
+        file.write(
+            '    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>\n'
+        )
+        file.write(
+            '    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">\n'
+        )
+
+        file.write(
+            '    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>\n'
+        )
+        file.write(
+            '    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />\n'
+        )
+        file.write(
+            '    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>\n'
+        )
+        file.write(
+            '    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>\n'
+        )
+
+        file.write("  <head>\n")
+        file.write("  <body>\n")
+
+        file.write("    <div class='container'>\n")
+        file.write("      <div class='row'>\n")
+        file.write("        <div class='col'>\n")
+        file.write(
+            '          <select id="multiple" class="btn js-example-basic-single" style="text-align: center;" name="state">\n'
+        )
+
+        for name, top in zip(names, top_10s):
+            file.write(
+                f'            <option value="{name}" name="{name}" text="{top}">{name}</option>\n'
+            )
+
+        file.write("          </select>\n")
+        file.write("        </div>\n")
+        file.write("      </div>\n")
+        file.write("    </div>\n")
+
+        file.write(
+            '  <script>$("#multiple").select2({ placeholder: "Select an entity" });</script>\n'
+        )
+        file.write(
+            '  <script>$("#multiple").on("select2:select", function(e) { Swal.fire({title: e.params.data.element.attributes.name.nodeValue, text: e.params.data.element.attributes.text.nodeValue, confirmButtonText: "Cool" })})</script>\n'
+        )
+
+        file.write("  <body>\n")
+        file.write("</html>\n")
 
 
 if __name__ == "__main__":
