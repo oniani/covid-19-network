@@ -15,7 +15,7 @@ import csv
 
 import pandas as pd
 
-from typing import List
+from typing import Dict, List
 
 from bokeh.io import output_file, show
 from bokeh.models import (
@@ -86,7 +86,7 @@ def main() -> None:
             similarities.append([])
 
     # Cleanup
-    names = [name.replace("  ", " ").replace("\t", " ") for name in names]
+    names = [name.replace("\t", " ").replace("  ", " ") for name in names]
 
     # Create a dataframe
     df = pd.DataFrame(
@@ -155,11 +155,11 @@ def main() -> None:
         size=4.5,
     )
 
-    output_file(
-        "graph.html",
-        title="COVID-19 Co-occurence Network Embeddings Visualization",
-    )
-    show(plot)
+    #     output_file(
+    #         "graph.html",
+    #         title="COVID-19 Co-occurence Network Embeddings Visualization",
+    #     )
+    #     show(plot)
 
     # CODE GENERATION -- MIGHT LOOK UGLY
     with open("search.html", "w") as file:
@@ -194,16 +194,32 @@ def main() -> None:
         # Selection
         file.write('          <select id="search" class="btn form-control">\n')
 
-        names_cats = dict(zip(names, categories))
+        reader_assoc = csv.reader(
+            open("../combined_graph/Combined_Dict.txt"), delimiter=";"
+        )
+
+        names_cats: Dict[str, str] = {}
+        for row in reader_assoc:
+            if "@" in row[0]:
+                items = row[0].split("@")
+                names_cats[
+                    items[0].replace("\t", " ").replace("  ", " ")
+                ] = items[1]
+            else:
+                names_cats[row[0].replace("\t", " ").replace("  ", " ")] = "NA"
+
         for name, category, top, similarity in zip(
             df["name"], df["category"], df["top10"], df["similarity"]
         ):
             similarity = ", ".join([str(i) for i in similarity])
 
-            try:
-                types = ", ".join([names_cats[name] for name in top])
-            except KeyError:
-                types = ", ".join(["NA"] * 10)
+            temp = []
+            for item in top.split(","):
+                try:
+                    temp.append(names_cats[item.strip()])
+                except KeyError:
+                    temp.append("NA")
+            types = ", ".join(temp)
 
             file.write(
                 f'            <option value="{name} ({category})" name="{name}" types="{types}" top="{top}" similarity="{similarity}">{name} ({category})</option>\n'
