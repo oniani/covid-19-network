@@ -7,7 +7,8 @@ Author:   David Oniani
 E-mail:   oniani.david@mayo.edu
 
 Description:
-    Co-occurence graph visualization using Bokeh.
+    The program does co-occurence graph visualization using Bokeh.
+    Besides, it does code-generation and creates a web search tool.
 """
 
 import csv
@@ -154,11 +155,11 @@ def main() -> None:
         size=4.5,
     )
 
-    # output_file(
-    #     "graph.html",
-    #     title="COVID-19 Co-occurence Network Embeddings Visualization",
-    # )
-    # show(plot)
+    output_file(
+        "graph.html",
+        title="COVID-19 Co-occurence Network Embeddings Visualization",
+    )
+    show(plot)
 
     # CODE GENERATION -- MIGHT LOOK UGLY
     with open("search.html", "w") as file:
