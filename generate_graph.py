@@ -2,7 +2,7 @@
 # encoding: UTF-8
 
 """
-Filename: create_matrix.py
+Filename: generate_graph.py
 Author:   David Oniani
 E-mail:   oniani.david@mayo.edu
 
