@@ -4,6 +4,8 @@ We constructed network embeddings for COVID-19 by applying the node2vec model
 over a co-occurrence network derived from the [CORD-19-on-FHIR](https://github.com/fhircat/CORD-19-on-FHIR)
 dataset.
 
+Additional code can be found at [covid-19-network-embeddings](https://github.com/shenfc/COVID-19-network-embeddings).
+
 ## Table of Contents
 
 - [Paper](#paper)
