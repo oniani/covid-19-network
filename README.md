@@ -8,7 +8,7 @@ dataset.
 
 - [Paper](#paper)
 - [Visualization](#visualization)
-- [Developers](#developers)
+- [Developement](#development)
 
 ## Paper
 
