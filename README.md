@@ -6,12 +6,6 @@ dataset.
 
 Additional code can be found at [covid-19-network-embeddings](https://github.com/shenfc/COVID-19-network-embeddings).
 
-## Table of Contents
-
-- [Paper](#paper)
-- [Visualization](#visualization)
-- [Developement](#development)
-
 ## Paper
 
 Our work has been published at [Journal of the American Medical Informatics Association (JAMIA)](https://academic.oup.com/jamia)
