@@ -2,7 +2,7 @@ bokeh==2.0.1
 gensim==3.8.1
 matplotlib==3.2.1
 networkx==2.4
-numpy==1.18.1
+numpy==1.22.0
 pandas==1.0.3
 scikit-learn==0.22.2.post1
 scipy==1.4.1
