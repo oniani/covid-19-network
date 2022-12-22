@@ -16,15 +16,26 @@ and is available [at this link: https://academic.oup.com/jamia/article/doi/10.10
 The network is visualized using [Bokeh](https://bokeh.org/) and is available
 [here: https://www.davidoniani.com/covid-19-network](https://www.davidoniani.com/covid-19-network).
 
-## Development
+## Developers
 
-The project was developed by David Oniani and supervised by [Dr. Feichen Shen](https://www.mayo.edu/research/faculty/shen-feichen-ph-d/bio-20238745).
+[covid-19-network][covid-19-network] has been developed by [David Oniani][david] and
+[Dr. Feichen Shen][drshen].
+
+## Implementation
+
+[covid-19-network][covid-19-network] has been implemented by [David Oniani][david].
 
 ### Collaborators
 
-[Dr. Guoqian Jiang](https://www.mayo.edu/research/faculty/jiang-guoqian-m-d-ph-d/bio-00093912) and [Dr. Hongfang Liu](https://www.mayo.edu/research/faculty/liu-hongfang-ph-d/bio-00055092)
+[Dr. Guoqian Jiang][drgiang] and [Dr. Hongfang Liu][drliu]
 
 ## References
 
 - [node2vec](https://github.com/aditya-grover/node2vec)
 - [Link Prediction Experiments](https://github.com/lucashu1/link-prediction)
+
+[david]: https://www.davidoniani.com/
+[drshen]: https://scholar.google.com/citations?user=E3tSCNYAAAAJ
+[drgiang]: https://www.mayo.edu/research/faculty/jiang-guoqian-m-d-ph-d/bio-00093912
+[drliu]: https://www.mayo.edu/research/faculty/jiang-guoqian-m-d-ph-d/bio-00093912
+[covid-19-network]: https://github.com/oniani/covid-19-network
